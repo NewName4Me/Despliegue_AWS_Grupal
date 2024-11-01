@@ -1,0 +1,54 @@
+name: terraform
+
+on:
+  workflow_dispatch: # Permite ejecutar manualmente el flujo de trabajo
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.1
+
+      - name: pasar mis tokens a aws
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: "us-east-1"
+
+      - name: Hacer el set up de tf
+        uses: hashicorp/setup-terraform@v3
+
+      - name: inicializar terraform
+        run: terraform init
+
+      - name: plan de terraform
+        run: terraform plan -no-color
+
+      - name: apply terraform
+        run: terraform apply -auto-approve
+
+  destroy: # Job para destruir la infraestructura
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.1
+
+      - name: pasar mis tokens a aws
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: "us-east-1"
+
+      - name: Hacer el set up de tf
+        uses: hashicorp/setup-terraform@v3
+
+      - name: inicializar terraform
+        run: terraform init
+
+      - name: destroy terraform
+        run: terraform destroy -auto-approve # Destruir la infraestructura automáticamente
