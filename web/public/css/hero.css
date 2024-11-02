@@ -1,0 +1,268 @@
+header {
+    background-image: url('../assets/img/superior.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    padding-left: 5rem;
+}
+
+header nav div {
+    margin-inline: auto 5rem;
+}
+
+header nav div a {
+    font-family: 'Staatliches';
+    color: white;
+    font-size: xx-large;
+    margin-left: 6rem;
+}
+
+header a:first-of-type img {
+    width: 15rem;
+}
+
+h1 {
+    font-family: 'Covered by your grace';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 3px;
+    opacity: 0.8;
+}
+
+h1 span {
+    display: block;
+    font-family: 'Staatliches';
+}
+
+main {
+    padding: 2rem;
+}
+
+h2 {
+    font-family: 'Staatliches';
+    color: var(--azul-clarito);
+    text-align: center;
+    font-size: xx-large;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+/* NOSOTROS */
+.sobreNosotros {
+    display: flex;
+    gap: 1rem;
+}
+
+.sobreNosotros img {
+    width: 100%;
+}
+
+.sobreNosotros article {
+    flex: 1;
+}
+
+.sobreNosotros article:first-of-type {
+    padding: 1rem;
+}
+
+.sobreNosotros p {
+    font-family: 'Open sans';
+    margin-bottom: 1rem;
+    line-height: 2rem;
+}
+
+/* VIAJES */
+
+.viajes {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.viajes article {
+    padding: 1rem;
+    border-radius: 16px;
+    border: 2px solid lightgray;
+    font-family: 'Open sans';
+    font-size: 0.9rem;
+}
+
+.viajes article h3 {
+    font-size: 'Staatliches';
+    color: var(--azul-clarito);
+    font-size: x-large;
+    letter-spacing: 0px;
+    margin-block: 0.5rem;
+}
+
+.viajes article img {
+    width: 20rem;
+}
+
+.viajes article div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.viajes article div img {
+    width: 2rem;
+}
+
+.infoViaje {
+    width: 40ch;
+    line-height: 2rem;
+}
+
+.viajes button {
+    display: block;
+    margin: 0 auto;
+    background: var(--rosa-chuli);
+    border: none;
+    border-radius: 24px;
+    padding: 1rem;
+    font-family: 'Open sans';
+    color: white;
+    margin-top: 2rem;
+    width: 100%;
+    font-size: large;
+    cursor: pointer;
+}
+
+/* DESCUENTO */
+
+.descuento {
+    margin-block: 3rem;
+    position: relative;
+}
+
+.descuento img {
+    width: 100vw;
+    margin-left: -2rem;
+}
+
+.descuento div {
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    padding-left: 3rem;
+    gap: 0.8rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.descuento div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 99.2%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+.descuento div * {
+    position: relative;
+    opacity: 1;
+    font-family: 'Staatliches';
+    margin-block: -0.1rem;
+}
+
+.descuento h3 {
+    color: var(--azul-clarito);
+    font-size: xx-large;
+}
+
+.descuento h4 {
+    color: white;
+    font-size: x-large;
+    font-weight: normal;
+}
+
+.descuento p {
+    color: white;
+    font-size: larger;
+    font-weight: normal;
+}
+
+/* TESTIMONIOS */
+.testimonios div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.testimonios article {
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+}
+
+.testimonios article img {
+    width: 1.5rem;
+}
+
+.testimonios article * {
+    margin-block: 0.4rem;
+    font-family: 'Open sans';
+}
+
+.testimonios article p:last-of-type {
+    color: var(--rosa-chuli);
+    margin-left: 18rem;
+}
+
+.testimonios article p:last-of-type::before {
+    content: '- ';
+}
+
+/* FOOTER */
+footer{
+    padding:3rem;
+    padding-left: 6rem;
+    padding-right: 4rem;
+}
+
+footer nav{
+    display: flex;
+    gap: 1rem;
+}
+
+footer * {
+    font-family: 'Staatliches';
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+footer a{
+    margin-right: 4rem;
+}
+
+footer p{
+    margin-left: auto;
+}
