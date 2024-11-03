@@ -1,0 +1,134 @@
+/* HEADER UNIFORME */
+header {
+    background: var(--azul-clarito);
+    position: relative;
+
+}
+
+header img {
+    width: 15rem;
+}
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    padding-left: 5rem;
+}
+
+header nav div {
+    margin-inline: auto 5rem;
+}
+
+header nav div a {
+    font-family: 'Staatliches';
+    color: white;
+    font-size: xx-large;
+    margin-left: 6rem;
+}
+
+/* FIN DEL HEADER */
+
+main {
+    padding: 1rem;
+}
+
+.nosotros {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 10rem;
+}
+
+.nosotros img {
+    width: 20rem;
+}
+
+h2 {
+    font-family: 'Staatliches';
+    color: var(--azul-clarito);
+    font-size: xx-large;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.nosotros article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nosotros p {
+    letter-spacing: 1.1px;
+    font-family: 'Open sans';
+    margin-bottom: 1rem;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+.nosotros p:first-of-type {
+    font-weight: 600;
+}
+
+/* INFO */
+.info img {
+    width: 7rem;
+}
+
+.info {
+    display: flex;
+}
+
+.info article {
+    text-align: center;
+    margin: 1rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info h3 {
+    font-family: 'Staatliches';
+    color: var(--azul-clarito);
+    font-size: xx-large;
+    letter-spacing: 1px;
+    margin-block: 0.5rem;
+    font-weight: normal;
+}
+
+.info p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: 'Open Sans';
+    line-height: 2rem;
+    padding-inline: 1.7rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 3rem;
+    padding-left: 6rem;
+    padding-right: 4rem;
+}
+
+footer nav {
+    display: flex;
+    gap: 1rem;
+}
+
+footer * {
+    font-family: 'Staatliches';
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+footer a {
+    margin-right: 4rem;
+}
+
+footer p {
+    margin-left: auto;
+}

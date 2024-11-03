@@ -101,11 +101,12 @@ h2 {
 }
 
 .viajes article h3 {
-    font-size: 'Staatliches';
+    font-family: 'Staatliches';
     color: var(--azul-clarito);
-    font-size: x-large;
-    letter-spacing: 0px;
+    font-size: xx-large;
+    letter-spacing: 1px;
     margin-block: 0.5rem;
+    font-weight: normal;
 }
 
 .viajes article img {
@@ -209,11 +210,21 @@ h2 {
 }
 
 /* TESTIMONIOS */
+.testimonios {
+    padding-right: 3rem;
+}
+
 .testimonios div {
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
+
+.testimonios article:hover {
+    box-shadow: 0px 0px 5px gray;
+    cursor: pointer;
+}
+
 
 .testimonios article {
     border: 2px solid lightgray;
@@ -241,13 +252,13 @@ h2 {
 }
 
 /* FOOTER */
-footer{
-    padding:3rem;
+footer {
+    padding: 3rem;
     padding-left: 6rem;
     padding-right: 4rem;
 }
 
-footer nav{
+footer nav {
     display: flex;
     gap: 1rem;
 }
@@ -259,10 +270,10 @@ footer * {
     font-size: x-large;
 }
 
-footer a{
+footer a {
     margin-right: 4rem;
 }
 
-footer p{
+footer p {
     margin-left: auto;
 }

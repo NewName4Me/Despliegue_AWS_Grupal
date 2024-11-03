@@ -1,0 +1,128 @@
+/* HEADER UNIFORME */
+header {
+    background: var(--azul-clarito);
+    position: relative;
+
+}
+
+header img {
+    width: 15rem;
+}
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    padding-left: 5rem;
+}
+
+header nav div {
+    margin-inline: auto 5rem;
+}
+
+header nav div a {
+    font-family: 'Staatliches';
+    color: white;
+    font-size: xx-large;
+    margin-left: 6rem;
+}
+
+/* FIN DEL HEADER */
+/* FOOTER */
+footer {
+    padding: 3rem;
+    padding-left: 6rem;
+    padding-right: 4rem;
+}
+
+footer nav {
+    display: flex;
+    gap: 1rem;
+}
+
+footer * {
+    font-family: 'Staatliches';
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+footer a {
+    margin-right: 4rem;
+}
+
+footer p {
+    margin-left: auto;
+}
+
+/* MAIN */
+
+h2 {
+    font-family: 'Staatliches';
+    color: var(--azul-clarito);
+    font-size: xx-large;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.viajes {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.viajes article {
+    padding: 1rem;
+    border-radius: 16px;
+    border: 2px solid lightgray;
+    font-family: 'Open sans';
+    font-size: 0.9rem;
+}
+
+.viajes article h3 {
+    font-family: 'Staatliches';
+    color: var(--azul-clarito);
+    font-size: xx-large;
+    letter-spacing: 1px;
+    margin-block: 0.5rem;
+    font-weight: normal;
+}
+
+.viajes article img {
+    width: 20rem;
+}
+
+.viajes article div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.viajes article div img {
+    width: 2rem;
+}
+
+.infoViaje {
+    width: 40ch;
+    line-height: 2rem;
+}
+
+.viajes button {
+    display: block;
+    margin: 0 auto;
+    background: var(--rosa-chuli);
+    border: none;
+    border-radius: 24px;
+    padding: 1rem;
+    font-family: 'Open sans';
+    color: white;
+    margin-top: 2rem;
+    width: 100%;
+    font-size: large;
+    cursor: pointer;
+}
