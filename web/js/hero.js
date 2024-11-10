@@ -26,6 +26,22 @@ function iniciarApp() {
     addYearToFooter();
 }
 
+/**
+ * Funcion que hace un console.warn con un mensaje de prueba
+ * 
+ * @function testWarningWorkflow
+ * @param {String} message 
+ * @param {Boolean} throwWarning 
+ * @throws {Error} 
+ * @returns {String} 
+ */
+export function testWarningWorkflow(message, throwWarning) {
+    if (throwWarning) {
+        console.warn('Este es un warning de prueba');
+    }
+    console.log(message);
+    return 'La prueba de warning termino exitosamente';
+}
 
 /**
  * Funcion que hace un console.log con un mensaje de prueba
