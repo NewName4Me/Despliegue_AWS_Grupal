@@ -91,9 +91,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: git pull (me petó antes)
-        run: git pull origin main # Asegurarse de que la rama local esté actualizada
-
       - name: Commit y push de la documentación generada
         run: |
           git add web/out
