@@ -22,14 +22,14 @@ resource "aws_internet_gateway" "internet_gateway" {
 
 # create public subnet az1
 # terraform aws create subnet
-resource "aws_subnet" "public_subnet_az1" {
+resource "aws_subnet" "public_subnet_erik" {
   vpc_id                  = aws_vpc.vpc.id
-  cidr_block              = "10.0.0.0/24"
-  availability_zone       = "us-east-1a"
+  cidr_block              = var.subnet_cidr_block
+  availability_zone       = var.availability_zone
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "public subnet Az1"
+    Name = "public subnet erik"
   }
 }
 
@@ -50,7 +50,7 @@ resource "aws_route_table" "public_route_table" {
 # associate public subnet az1 to "public route table"
 # terraform aws associate subnet with route table
 resource "aws_route_table_association" "public_subnet_az1_route_table_association" {
-  subnet_id      = aws_subnet.public_subnet_az1.id
+  subnet_id      = aws_subnet.public_subnet_erik.id
   route_table_id = aws_route_table.public_route_table.id
 }
 
