@@ -1,4 +1,4 @@
-name: deploy-destroy
+name: deploy-destroy-jsdoc
 
 on:
   workflow_dispatch: # Permite ejecutar manualmente el flujo de trabajo
