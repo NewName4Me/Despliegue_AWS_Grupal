@@ -65,7 +65,7 @@ jobs:
       - name: destroy terraform
         run: terraform destroy -auto-approve # Destruir la infraestructura automáticamente
 
-  generate-doc: # generar documentacion de jsdoc
+  generate-doc: # Generar documentación de jsdoc
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -78,6 +78,9 @@ jobs:
 
       - run: npm install -g jsdoc
 
+      - name: Limpiar la carpeta out (eliminar archivos generados previamente)
+        run: rm -rf web/out/* # Esto elimina todo el contenido de la carpeta out
+
       - name: Generar documentación de JSDoc
         run: |
           cd web
@@ -88,10 +91,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Limpiar archivos no rastreados (git clean)
-        run: git clean -fdx # Esto eliminará archivos no rastreados y directorios
-
-      - name: git pull (me peto antes)
+      - name: git pull (me petó antes)
         run: git pull origin main # Asegurarse de que la rama local esté actualizada
 
       - name: Commit y push de la documentación generada
