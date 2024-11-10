@@ -30,6 +30,15 @@ jobs:
       - name: apply terraform
         run: terraform apply -auto-approve
 
+      - name: Descargar tfstate
+        run: cp terraform.tfstate ./tfstate
+
+      - name: Subir tfstate como artefacto
+        uses: actions/upload-artifact@v3
+        with:
+          name: terraform-tfstate
+          path: ./tfstate/terraform.tfstate
+
   destroy: # Job para destruir la infraestructura
     runs-on: ubuntu-latest
     steps:
