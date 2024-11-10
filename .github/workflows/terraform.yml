@@ -30,7 +30,7 @@ jobs:
       - name: apply terraform
         run: terraform apply -auto-approve
 
-      - name: Subir tfstate como artefacto porfi update
+      - name: Subir tfstate como artefacto
         uses: actions/upload-artifact@v3
         with:
           name: terraform-tfstate
@@ -41,6 +41,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.1
+
+      - name: Descargar tfstate como artefacto
+        uses: actions/download-artifact@v3
+        with:
+          name: terraform-tfstate
+          path: .
 
       - name: pasar mis tokens a aws
         uses: aws-actions/configure-aws-credentials@v4
@@ -58,4 +64,3 @@ jobs:
 
       - name: destroy terraform
         run: terraform destroy -auto-approve # Destruir la infraestructura automáticamente
- 
