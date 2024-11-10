@@ -30,7 +30,7 @@ jobs:
       - name: apply terraform
         run: terraform apply -auto-approve
 
-      - name: Subir tfstate como artefacto porfi
+      - name: Subir tfstate como artefacto porfi update
         uses: actions/upload-artifact@v3
         with:
           name: terraform-tfstate
