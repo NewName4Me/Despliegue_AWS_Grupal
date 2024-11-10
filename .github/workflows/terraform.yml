@@ -31,7 +31,7 @@ jobs:
         run: terraform apply -auto-approve
 
       - name: Subir tfstate como artefacto
-        uses: actions/upload-artifact@vv4.4.3
+        uses: actions/upload-artifact@v4.4.3
         with:
           name: terraform-tfstate
           path: terraform.tfstate
