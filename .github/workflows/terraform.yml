@@ -1,4 +1,4 @@
-name: terraform 
+name: deploy-destroy 
 
 on:
   workflow_dispatch: # Permite ejecutar manualmente el flujo de trabajo
