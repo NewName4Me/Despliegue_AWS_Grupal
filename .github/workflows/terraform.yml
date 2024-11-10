@@ -81,15 +81,21 @@ jobs:
       - name: Generar documentación de JSDoc
         run: |
           cd web
-          jsdoc js -d out 
+          jsdoc js -d out
 
-      - name: Commit y push de la documentación generada
+      - name: Configurar git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: git pulll (me peto antes)
+        run: git pull origin main # Asegurarse de que la rama local esté actualizada
+
+      - name: Commit y push de la documentación generada
+        run: |
           git add web/out
           git commit -m "Actualizar documentación JSDoc"
-          git push
+          git push origin main
         env:
-          # tuve que cambiar los permisos de actions a read and write !IMPORTANT
+          #!IMPORTANT tuve que cambiar los permisos de actions a read and write
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
