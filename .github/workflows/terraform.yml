@@ -21,13 +21,13 @@ jobs:
       - name: Hacer el set up de tf
         uses: hashicorp/setup-terraform@v3
 
-      - name: inicializar terraform
+      - name: inicializar terraform 
         run: terraform init
 
       - name: plan de terraform
         run: terraform plan -no-color
 
-      - name: apply terraform
+      - name: apply terraform por fis
         run: terraform apply -auto-approve
 
       - name: Descargar tfstate
