@@ -31,7 +31,7 @@ jobs:
         run: terraform apply -auto-approve
 
       - name: Subir tfstate como artefacto
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@vv4.4.3
         with:
           name: terraform-tfstate
           path: terraform.tfstate
@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v4.2.1
 
       - name: Descargar tfstate como artefacto
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.8
         with:
           name: terraform-tfstate
           path: .
