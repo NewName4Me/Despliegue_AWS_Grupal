@@ -88,7 +88,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: git pulll (me peto antes)
+      - name: Limpiar archivos no rastreados (git clean)
+        run: git clean -fdx # Esto eliminará archivos no rastreados y directorios
+
+      - name: git pull (me peto antes)
         run: git pull origin main # Asegurarse de que la rama local esté actualizada
 
       - name: Commit y push de la documentación generada
