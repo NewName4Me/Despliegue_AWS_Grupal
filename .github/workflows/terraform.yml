@@ -91,4 +91,5 @@ jobs:
           git commit -m "Actualizar documentación JSDoc"
           git push
         env:
+          # tuve que cambiar los permisos de actions a read and write !IMPORTANT
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
