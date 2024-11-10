@@ -1,4 +1,4 @@
-name: deploy-destroy 
+name: deploy-destroy
 
 on:
   workflow_dispatch: # Permite ejecutar manualmente el flujo de trabajo
@@ -64,3 +64,31 @@ jobs:
 
       - name: destroy terraform
         run: terraform destroy -auto-approve # Destruir la infraestructura automáticamente
+
+  generate-doc: # generar documentacion de jsdoc
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.1
+
+      - name: Instalar Node.js y JSDoc
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: "20.15.1"
+
+      - run: npm install -g jsdoc
+
+      - name: Generar documentación de JSDoc
+        run: |
+          cd web
+          jsdoc js -d out 
+
+      - name: Commit y push de la documentación generada
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/out
+          git commit -m "Actualizar documentación JSDoc"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
