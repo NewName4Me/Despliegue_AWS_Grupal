@@ -95,7 +95,7 @@ jobs:
         run: |
           git add web/out
           git commit -m "Actualizar documentación JSDoc"
-          git push origin main
+          git push --force origin main
         env:
           #!IMPORTANT tuve que cambiar los permisos de actions a read and write
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
