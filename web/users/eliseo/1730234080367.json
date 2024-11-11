@@ -1,0 +1,13 @@
+{
+    "userName": "eliseo",
+    "title": "esta es una publicacion de eliseo",
+    "content": "quiero comprobar que se pueden ver publicaciones de multiples personas en el mainwall",
+    "comentarios": [
+        "que chulo",
+        "una pasada eliseo el mejor",
+        "test",
+        "test 2",
+        "test 3"
+    ],
+    "date": 1730234080367
+}
