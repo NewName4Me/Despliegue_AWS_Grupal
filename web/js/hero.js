@@ -68,7 +68,7 @@ export function testWorkflow(message, throwError) {
  * @param {Number} b - The second number
  * @returns {Number} The diference of a and b
  */
-export function restar(a, b) {
+export function restarV2(a, b) {
     return a - b;
 }
 
