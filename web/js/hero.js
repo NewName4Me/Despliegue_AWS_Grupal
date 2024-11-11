@@ -61,14 +61,14 @@ export function testWorkflow(message, throwError) {
 }
 
 /**
- * Calculate the sum of two numbers
+ * Calculate the diference of two numbers
  * 
  * @function sum
  * @param {Number} a - The first number
  * @param {Number} b - The second number
- * @returns {Number} The sum of a and b
+ * @returns {Number} The diference of a and b
  */
-export function sum(a, b) {
-    return a + b;
+export function restar(a, b) {
+    return a - b;
 }
 
