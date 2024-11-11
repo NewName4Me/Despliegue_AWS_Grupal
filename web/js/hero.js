@@ -63,7 +63,7 @@ export function testWorkflow(message, throwError) {
 /**
  * Calculate the diference of two numbers
  * 
- * @function sum
+ * @function restarV2
  * @param {Number} a - The first number
  * @param {Number} b - The second number
  * @returns {Number} The diference of a and b
