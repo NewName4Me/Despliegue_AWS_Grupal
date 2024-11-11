@@ -60,3 +60,15 @@ export function testWorkflow(message, throwError) {
     return 'La prueba termino exitosamente';
 }
 
+/**
+ * Calculate the sum of two numbers
+ * 
+ * @function sum
+ * @param {Number} a - The first number
+ * @param {Number} b - The second number
+ * @returns {Number} The sum of a and b
+ */
+export function sum(a, b) {
+    return a + b;
+}
+
