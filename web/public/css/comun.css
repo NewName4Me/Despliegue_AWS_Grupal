@@ -1,33 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Covered+By+Your+Grace&family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-:root {
-    --azul-clarito: #15B9D5;
-    --rosa-chuli: #DC135F;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    transition: 0.2s ease all;
+    font-family: 'Bricolage Grotesque';
 }
 
 body {
-    overflow-x: hidden;
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    background: var(--color-neutral);
 }
 
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-section {
-    margin-block: 4rem;
+:root {
+    --color-primary: #FFFFFF;
+    --color-secondary: #F2F2F2;
+    --color-info: #4B0082;
+    --color-base: #212121;
+    --color-accent: #8F8F8F;
+    --color-neutral: #E5E5EA;
+    --color-success: #8F8F8F;
+    --color-danger: #FF0000;
 }

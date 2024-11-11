@@ -1,0 +1,277 @@
+/* FORMULARIO CREAR PUBLICACION */
+#modalPublicacion {
+    display: none;
+    width: 20rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-base);
+    padding: 2rem;
+    padding-top: 0.5rem;
+    border-radius: 16px;
+    text-align: left;
+}
+
+#modalPublicacion h2 {
+    padding-top: -1rem;
+    color: var(--color-primary);
+}
+
+#modalPublicacion form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+#modalPublicacion form label {
+    font-weight: bolder;
+    color: var(--color-primary);
+}
+
+#modalPublicacion form input,
+#modalPublicacion form textarea {
+    background: var(--color-accent);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+#modalPublicacion form button {
+    background: var(--color-info);
+    color: var(--color-neutral);
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: large;
+}
+
+/* DAR AL CHECKBOX ASPECTO DE FORMULARIO */
+#showFormUpload {
+    display: none;
+}
+
+/* Estilos del label como botón */
+label[for="showFormUpload"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--color-info);
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    font-weight: bolder;
+    font-size: 2rem;
+
+    position: fixed;
+    bottom: 10%;
+    right: 25%;
+}
+
+label[for="showFormUpload"]:hover {
+    background-color: var(--color-success);
+}
+
+/* Muestra la sección cuando el checkbox está marcado */
+#showFormUpload:checked+section {
+    display: block;
+    margin-top: 15px;
+}
+
+header {
+    background: var(--color-base);
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: 0.8rem;
+}
+
+header a:hover {
+    transition: all 0s ease;
+    border-bottom: 3px solid var(--color-info);
+    padding-bottom: 0rem;
+}
+
+/* PUBLICACION */
+
+.publication {
+    background: var(--color-neutral);
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.publication .userName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-base);
+}
+
+.publication .title {
+    font-size: 1.8rem;
+    margin-top: -0.7rem;
+    color: var(--color-base);
+}
+
+.publication .content {
+    font-size: 1rem;
+    color: var(--color-base);
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 16px;
+    min-height: 5rem;
+}
+
+.publication .date {
+    margin-left: auto;
+    font-style: italic;
+    color: var(--color-base);
+}
+
+.date::before {
+    content: ' Publicado en: ';
+}
+
+.comentarios {
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    border-radius: 16px;
+    padding-top: 0rem;
+}
+
+.cabeceraPublicacion {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.publicacionIndividual {
+    border: 2px solid var(--color-success);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    background: var(--color-secondary);
+}
+
+.Addcomentario {
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+.modalListaUsuarios {
+    position: fixed;
+    left: 2%;
+    top: 15%;
+    text-align: left;
+}
+
+.modalListaUsuarios li {
+    list-style: none;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.modalListaUsuarios ul {
+    margin-left: -1rem;
+}
+
+.modalListaUsuarios button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    margin-left: -1rem;
+}
+
+.modalListaUsuarios li:hover,
+.modalListaUsuarios button:hover {
+    cursor: pointer;
+}
+
+.modalListaUsuarios li:hover::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-info);
+    display: inline-block;
+    margin-right: 0.5rem;
+    position: absolute;
+    left: -12%;
+    top: 5%;
+}
+
+/* MODAL CERRAR SESION */
+.modalCerrarSesion {
+    position: fixed;
+    left: 10%;
+    top: 0%;
+}
+
+.modalCerrarSesion button {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+}
+
+.modalCerrarSesion button:hover {
+    background: white;
+    box-shadow: 0px 0px 3px black;
+}
+
+/* MODAL PUBLIACCAION ELIMINADA */
+.publicacionEliminada {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    background: var(--color-info);
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    padding: 1rem;
+    color: var(--color-primary);
+}
+
+input[type=file] {
+    display: none;
+}
+
+label[for=img] {
+    cursor: pointer;
+    background: var(--color-accent);
+    padding: 1rem;
+    color: var(--color-base) !important;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+}
+
+label[for=img]:hover {
+    scale: 1.05;
+}
+
+.imgCont {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.imgPublicacion {
+    max-width: 30rem;
+}

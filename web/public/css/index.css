@@ -1,0 +1,62 @@
+body>h2:first-of-type {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    color: var(--color-base);
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    margin: 15% auto;
+    border: 2px solid black;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 16px;
+    gap: 5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form input {
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+    padding: 1rem;
+    border-radius: 16px;
+    border: none;
+}
+
+div {
+    height: 430px;
+    background: black;
+    width: 2px;
+    border-radius: 16px;
+    margin: -1rem;
+}
+
+input[type=submit] {
+    background: var(--color-info);
+    color: var(--color-neutral);
+    font-size: medium;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+    transition: 0s;
+}
+
+input[type=submit]:active {
+    scale: 1.1;
+}

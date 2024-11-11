@@ -1,0 +1,8 @@
+2024-11-04 13:16:59 - Error al registrar usuario: Ambas contraseñas deben ser iguales
+2024-11-04 13:17:06 - Error al registrar usuario: Usuario ya existente
+2024-11-04 13:19:44 - Success: Carpeta creada usuario => andres
+2024-11-04 13:21:53 - Error al logear usuario: Nombre o contraseña incorrectos
+2024-11-04 13:21:59 - Succes: usuario logeado => erik
+2024-11-04 13:26:49 - Success: Publacion 1730723209895por el usuario erik publicada
+2024-11-04 13:26:57 - Deleted: Publicacion C:\Users\torta\Desktop\Code\Clase_2\Servidor\MyWall\MyWall\controller/../users/erik/1730723209895.json eliminada
+2024-11-04 13:29:47 - Comentario añadido a la publicacion 1730234080367

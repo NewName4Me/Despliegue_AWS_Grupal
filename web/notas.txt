@@ -1,0 +1,34 @@
+FUNCIONALIDADES DE MYWALL
+
+    - Registrarse con validación de repetir contraseñas y que el usuario no exita previamente
+
+    - Logear validando datos
+
+    - Poder hacer publicaciones que se almacenan en la carpeta del usuario
+
+    - Poder publicar imagenes junto con el "pensamiento" añadido
+
+    - Poder eliminar publicaciones de el mismo usuario con el que accedes
+
+    - Poder ver unicamente tu perfil o el de un usuarios
+
+    - Cuando entras a un perfil que no es el tuyo sus visitas aumentan y esto se muestra en cada perfil
+            * Archivo /users/visits.ini 
+
+    - Poder ver lista de usuarios  para acceder a cada uno
+
+    - Poder añadir comentarios a los pensamientos de cada usuario
+
+    - Las publicaciones muestran: 
+            * Nombre usuario que publicaco 
+            * Fecha de publicacion 
+            * Titulo de publicacion
+            * Contenido publicacion
+            * Imagen con la publicacion (opcional)
+            * Comentarios de todo el mundo
+            
+    - Las publicaciones se ordenan automaticamente segun la fecha de creación
+
+    -Añadir console.log en el directorio raiz donde se almacenan algunas de las acciones 
+    sucedidas durante el uso de la aplicacion
+            * Las acciones que se registran aparecen ya como ejemplo en el console.log subido

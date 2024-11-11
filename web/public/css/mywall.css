@@ -1,0 +1,146 @@
+header {
+    background: var(--color-base);
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: 0.8rem;
+}
+
+header a:hover {
+    transition: all 0s ease;
+    border-bottom: 3px solid var(--color-info);
+    padding-bottom: 0rem;
+}
+
+article {
+    background: var(--color-neutral);
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+article .userName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-base);
+}
+
+article .title {
+    font-size: 1.8rem;
+    margin-top: -0.7rem;
+    color: var(--color-base);
+}
+
+article .content {
+    font-size: 1rem;
+    color: var(--color-base);
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 16px;
+    min-height: 5rem;
+}
+
+article .date {
+    margin-left: auto;
+    font-style: italic;
+    color: var(--color-base);
+}
+
+.date::before {
+    content: ' Publicado en: ';
+}
+
+
+.publication {
+    background: var(--color-neutral);
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.publication .userName {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-base);
+}
+
+.publication .title {
+    font-size: 1.8rem;
+    margin-top: -0.7rem;
+    color: var(--color-base);
+}
+
+.publication .content {
+    font-size: 1rem;
+    color: var(--color-base);
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    padding-bottom: 3rem;
+    border-radius: 16px;
+    min-height: 5rem;
+}
+
+.publication .date {
+    margin-left: auto;
+    font-style: italic;
+    color: var(--color-base);
+}
+
+.date::before {
+    content: ' Publicado en: ';
+}
+
+.comentarios {
+    border: 2px solid var(--color-base);
+    padding: 1rem;
+    border-radius: 16px;
+    padding-top: 0rem;
+}
+
+.cabeceraPublicacion {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.publicacionIndividual {
+    border: 2px solid var(--color-success);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    background: var(--color-secondary);
+}
+
+.deleteBtn {
+    background: var(--color-danger);
+    color: var(--color-primary);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: large;
+    margin-left: 86%;
+    margin-top: 2%;
+}
+
+.imgCont {
+    width: 44rem;
+    border: 2px solid black;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.imgPublicacion {
+    max-width: 30rem;
+}
