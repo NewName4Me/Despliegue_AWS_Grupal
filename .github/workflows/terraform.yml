@@ -1,7 +1,7 @@
 name: deploy-destroy-jsdoc
 
 on:
-  workflow_dispatch: # Permite ejecutar manualmente el flujo de trabajo
+  workflow_dispatch: #! Permite ejecutar manualmente el flujo de trabajo
 
 jobs:
   deploy:
@@ -36,7 +36,7 @@ jobs:
           name: terraform-tfstate
           path: terraform.tfstate
 
-  destroy: # Job para destruir la infraestructura
+  destroy: #! Job para destruir la infraestructura
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -63,9 +63,9 @@ jobs:
         run: terraform init
 
       - name: destroy terraform
-        run: terraform destroy -auto-approve # Destruir la infraestructura automáticamente
+        run: terraform destroy -auto-approve #! Destruir la infraestructura automáticamente
 
-  generate-doc: # Generar documentación de jsdoc
+  generate-doc: #! Generar documentación de jsdoc
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -76,15 +76,15 @@ jobs:
         with:
           node-version: "20.15.1"
 
-      - run: npm install -g jsdoc
+      - run: npm install -g jsdoc #! instalacion global para evitar configurar package.json
 
       - name: Limpiar la carpeta out (eliminar archivos generados previamente)
-        run: rm -rf web/out/* # Esto elimina todo el contenido de la carpeta out
+        run: rm -rf web/out/* #! Esto elimina todo el contenido de la carpeta out
 
       - name: Generar documentación de JSDoc
         run: |
           cd web
-          jsdoc js -d out
+          jsdoc js -d out #!indico el directorio de salida como *out* 
 
       - name: Configurar git
         run: |
@@ -95,7 +95,7 @@ jobs:
         run: |
           git add web/out
           git commit -m "Actualizar documentación JSDoc"
-          git push --force origin main
+          git push --force origin main #!el force es por problemas de escritura del bot(creo)
         env:
           #!IMPORTANT tuve que cambiar los permisos de actions a read and write
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
