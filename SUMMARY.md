@@ -4,3 +4,4 @@
 * [Integrantes](integrantes.md)
 * [Tecnologías](tecnologias.md)
 * [Diseño Figma](diseno-figma.md)
+* [Contacto](contacto.md)
